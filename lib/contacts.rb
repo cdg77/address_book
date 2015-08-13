@@ -4,6 +4,7 @@ class Contacts
       @first_name = first_name
       @last_name = last_name
       @birthday = birthday
+      # @phone = []
     end
 
     define_method(:first_name) do
@@ -21,4 +22,11 @@ class Contacts
     define_singleton_method(:all) do
       @@contacts
     end
+
+    define_method(:save) do
+      @@contacts.push(self)
+    end
+    
+
+
 end

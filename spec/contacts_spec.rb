@@ -30,10 +30,12 @@ describe(Contacts) do
     end
   end
 
-#  describe("#save") do
-#    it("saves each contact") do
-
-#    end
-#  end
+  describe("#save") do
+    it("saves each contact") do
+      test_contact = Contacts.new("Oleander", "Oscar", "7/7/77")
+      test_contact.save()
+      expect(Contacts.all()).to(eq([test_contact]))
+    end
+  end
 
 end
