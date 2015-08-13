@@ -13,4 +13,7 @@ class Contacts
       @last_name
     end
 
+    define_method(:birthday) do
+      @birthday
+    end
 end

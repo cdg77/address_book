@@ -17,4 +17,11 @@ describe(Contacts) do
     end
   end
 
+  describe("#birthday") do
+    it("returns the birthday of a contact") do
+      test_birthday = Contacts.new("Oleander", "Oscar", "7/7/77")
+      expect(test_birthday.birthday()).to(eq("7/7/77"))
+    end
+  end
+
 end
