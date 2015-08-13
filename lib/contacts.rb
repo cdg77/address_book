@@ -8,4 +8,9 @@ class Contacts
     define_method(:first_name) do
       @first_name
     end
+
+    define_method(:last_name) do
+      @last_name
+    end
+
 end

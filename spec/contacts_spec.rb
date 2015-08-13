@@ -10,4 +10,11 @@ describe(Contacts) do
     end
   end
 
+  describe("#last_name") do
+    it("returns the last name of contact") do
+      test_last_name = Contacts.new("Oleander", "Oscar", "7/7/77")
+      expect(test_last_name.last_name()).to(eq('Oscar'))
+    end
+  end
+
 end
