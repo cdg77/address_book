@@ -4,6 +4,7 @@ class Contacts
       @first_name = first_name
       @last_name = last_name
       @birthday = birthday
+      @id = @@contacts.length.+(1)
       # @phone = []
     end
 
@@ -31,5 +32,8 @@ class Contacts
       @@contacts = []
     end
 
+    define_method(:id) do
+      @id
+    end
 
 end

@@ -49,4 +49,12 @@ describe(Contacts) do
     end
   end
 
+  describe('#id') do
+    it('returns a contacts id') do
+      test_contact = Contacts.new("Oleander", "Oscar", "7/7/77")
+      test_contact.save()
+      expect(test_contact.id()).to(eq(1))
+    end
+  end
+
 end
