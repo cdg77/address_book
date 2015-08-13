@@ -2,6 +2,9 @@ require('rspec')
 require ('contacts')
 
 describe(Contacts) do
+  before() do
+    Contacts.clear()
+  end
 
   describe("#first_name") do
     it("returns the first name of a contact") do
@@ -35,6 +38,14 @@ describe(Contacts) do
       test_contact = Contacts.new("Oleander", "Oscar", "7/7/77")
       test_contact.save()
       expect(Contacts.all()).to(eq([test_contact]))
+    end
+  end
+
+  describe(".clear") do
+    it("clears all contacts") do
+      Contacts.new("Oleander", "Oscar", "7/7/77").save()
+      Contacts.clear()
+      expect(Contacts.all()).to(eq([]))
     end
   end
 
