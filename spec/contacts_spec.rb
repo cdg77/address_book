@@ -24,4 +24,16 @@ describe(Contacts) do
     end
   end
 
+  describe(".all") do
+    it("returns an empty array to store contacts") do
+      expect(Contacts.all()).to(eq([]))
+    end
+  end
+
+#  describe("#save") do
+#    it("saves each contact") do
+
+#    end
+#  end
+
 end
