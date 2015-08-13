@@ -27,7 +27,6 @@ post('/contacts') do
 end
 
 get('/contacts/:id') do
-  # "contact #: " + params.fetch('id')
-  @contact = Contacts.find(params.fetch('id'))
+  @contact = Contacts.find(params.fetch('id').to_i())
   erb(:contact)
 end
